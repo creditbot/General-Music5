@@ -18,7 +18,7 @@ const fs = require('fs');
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "3";
+const prefix = "p";
 
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
@@ -249,18 +249,18 @@ function play(guild, song) {
 
 
 	client.on("message", message => {
- if (message.content === "3help") {
+ if (message.content === "phelp") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription('👑أوامر الموسيقى👑')
-	  .addField('❖-|3play', `🎸لتشغيل أغنية برآبط أو بأسم🎵`)
-	  .addField('❖-|3skip', `♠لتجآوز الأغنية الحآلية🎺`)
-	  .addField('❖-|3pause', `🚩إيقآف الأغنية مؤقتا💯`)
-	  .addField('❖-|3resume', `🎧لموآصلة الإغنية بعد إيقآفهآ مؤقتا🎵`)
-          .addField('❖-|3vol', `🔊تغيير درجة الصوت 100 - 0🔇`)
-          .addField('❖-|3stop', `🔘لإخرآج البوت من الروم❗`)
-          .addField('❖-|3queue', `🎸لمعرفة قآئمة التشغيل🎤`)
-          .addField('❖-|3music', `🔰لأرسال الأوامر بلشات🔰`)
+	  .addField('❖-|pplay', `🎸لتشغيل أغنية برآبط أو بأسم🎵`)
+	  .addField('❖-|pskip', `♠لتجآوز الأغنية الحآلية🎺`)
+	  .addField('❖-|ppause', `🚩إيقآف الأغنية مؤقتا💯`)
+	  .addField('❖-|presume', `🎧لموآصلة الإغنية بعد إيقآفهآ مؤقتا🎵`)
+          .addField('❖-|pvol', `🔊تغيير درجة الصوت 100 - 0🔇`)
+          .addField('❖-|pstop', `🔘لإخرآج البوت من الروم❗`)
+          .addField('❖-|pqueue', `🎸لمعرفة قآئمة التشغيل🎤`)
+          .addField('❖-|pmusic', `🔰لأرسال الأوامر بلشات🔰`)
   message.author.send({embed});
       message.channel.send(":white_check_mark: | Check Your DM تم الأرسال بلخاص")
 
